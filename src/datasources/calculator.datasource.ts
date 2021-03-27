@@ -4,7 +4,7 @@ import {juggler} from '@loopback/repository';
 const config = {
   name: 'calculator',
   connector: 'soap',
-  url: 'https://calculator-webservice.mybluemix.ent/calculator',
+  url: 'https://calculator-webservice.mybluemix.net/calculator',
   wsdl: 'https://calculator-webservice.mybluemix.net/calculator?wsdl',
   remotingEnabled: true,
   operations: {
@@ -45,6 +45,6 @@ export class CalculatorDataSource extends juggler.DataSource
     @inject('datasources.config.calculator', {optional: true})
     dsConfig: object = config,
   ) {
-    super(dsConfig);
+    super(dsConfig); 
   }
 }
